@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/api.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.test
+
+# dependencies
+**/node_modules
+
+#contracts
+**/target
+**/out
+
+#keys
+**/neardev
+**/creds
+
+# misc
+**/.DS_Store
+**/*.pem
+

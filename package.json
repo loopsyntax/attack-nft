@@ -1,0 +1,29 @@
+{
+  "name": "diesel-attack-nft-near",
+  "version": "1.1.0",
+  "description": "Diesel Attack game backend API server calling NEAR smart contract and minting NFTs for players",
+  "main": "server.js",
+  "scripts": {
+    "start": "env-cmd -f ./config/testnet-account.env node server.js",
+    "test:server": "node scripts/test.server.js",
+    "dev:server": "env-cmd -f ./neardev/dev-account.env node server.js",
+    "build": "node contract/compile.js",
+    "dev:deploy": "rm -rf neardev && near dev-deploy contract/target/wasm32-unknown-unknown/release/diesel_attack_nft_near.wasm && env-cmd -f ./neardev/dev-account.env node scripts/init.js",
+    "dev:build:deploy": "yarn build && rm -rf neardev && near dev-deploy contract/target/wasm32-unknown-unknown/release/diesel_attack_nft_near.wasm && env-cmd -f ./neardev/dev-account.env node scripts/init.js",
+    "test": "env-cmd -f ./neardev/dev-account.env node scripts/test.contract.js",
+    "testnet:test": "env-cmd -f ./config/testnet-account.env node scripts/test.contract.js",
+    "deploy:contract": "./scripts/deploy.sh"
+  },
+  "author": "Diesel Attack Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "env-cmd": "^10.1.0",
+    "fastify": "^4.10.0",
+    "near-api-js": "^0.44.2",
+    "near-cli": "^3.1.0",
+    "shelljs": "^0.8.5",
+    "tweetnacl": "^1.0.3",
+    "tweetnacl-util": "^0.15.1"
+  }
+}
