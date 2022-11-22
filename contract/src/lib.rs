@@ -28,8 +28,6 @@ enum StorageKey {
     Approval
 }
 
-
-// NFT data
 pub struct NftData {
     code: String,
     name: String,
@@ -175,7 +173,6 @@ impl Contract {
             SINGLE_CALL_GAS,
         );
         log!("Success! NFT has been minted for {}! Token code = {}", receiver_id.clone(), &nft_data.code.clone());
-
 
         nft_data.code
     }

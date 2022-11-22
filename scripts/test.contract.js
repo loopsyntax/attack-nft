@@ -1,10 +1,5 @@
 const sh = require("shelljs");
 
-// Parse near call response and return result of contract function call
-const getResult = (res) => {
-  return res.stdout.split(/\r?\n/).slice(-2, -1)[0];
-};
-
 const main = async () => {
   const contractName =
     process.env.CONTRACT_NAME ||
@@ -17,8 +12,7 @@ const main = async () => {
 
   // Mint and send NFT
   console.log("Try to mint a new NFT ...");
-  let res = await sh.exec(`near call ${contractName} nft_mint '{"username": "dieselattack.testnet"}' --deposit-yocto 10000000000000000000000 --account-id ${contractName} --gas 200000000000000`);
-  const tokenId = getResult(res);
+  sh.exec(`near call ${contractName} nft_mint '{"username": "dieselattack.testnet"}' --deposit-yocto 10000000000000000000000 --account-id ${contractName} --gas 200000000000000`);
 
   // Get info
   // console.log("Try to get NFT info ...");

@@ -2,11 +2,11 @@
 set -e
 
 CONTRACT=nft.dieselattack.testnet
-#MASTER_ACCOUNT=dieselattack.testnet
+MASTER_ACCOUNT=dieselattack.testnet
 
 # delete and create subaccount
 #near delete $CONTRACT $MASTER_ACCOUNT  # uncomment to delete old account
-# near create-account $CONTRACT --masterAccount $MASTER_ACCOUNT --initial-balance 100  #uncomment if account is just created
+near create-account $CONTRACT --masterAccount $MASTER_ACCOUNT --initial-balance 100
 
 # deploy contract
 near deploy --wasmFile contract/target/wasm32-unknown-unknown/release/diesel_attack_nft_near.wasm --accountId $CONTRACT

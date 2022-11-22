@@ -36,7 +36,7 @@ const { code } = sh.exec(buildCmd);
 // <CURRENT_DIRECTORY>/out/main.wasm
 if (code === 0 && calledFromDir !== __dirname) {
   const linkDir = `${calledFromDir}/out`;
-  const link = `${calledFromDir}/out/main.wasm`;
+  const link = `${linkDir}/main.wasm`;
   // const packageName = require("fs")
   //   .readFileSync(`${__dirname}/Cargo.toml`)
   //   .toString()
