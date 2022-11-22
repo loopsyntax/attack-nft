@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-CONTRACT=nft.dieselattack.testnet
+CONTRACT=nfts.dieselattack.testnet
 MASTER_ACCOUNT=dieselattack.testnet
 
 # delete and create subaccount
@@ -13,5 +13,6 @@ near deploy --wasmFile contract/target/wasm32-unknown-unknown/release/diesel_att
 near call $CONTRACT new --accountId $CONTRACT
 
 # copy credentials for later deploy
-sudo cp ~/.near-credentials/testnet/$CONTRACT.json /creds/$CONTRACT.json
+#sudo cp ~/.near-credentials/testnet/$CONTRACT.json /creds/$CONTRACT.json
+sudo cp ~/.near-credentials/testnet/$CONTRACT.json ./creds/
 sudo chmod 664 creds/$CONTRACT.json

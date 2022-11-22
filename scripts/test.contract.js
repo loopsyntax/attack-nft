@@ -12,7 +12,7 @@ const main = async () => {
 
   // Mint and send NFT
   console.log("Try to mint a new NFT ...");
-  sh.exec(`near call ${contractName} nft_mint '{"username": "dieselattack.testnet"}' --deposit-yocto 10000000000000000000000 --account-id ${contractName} --gas 200000000000000`);
+  sh.exec(`near call ${contractName} nft_mint '{"username": "dieselattack.testnet"}' --deposit-yocto 100000000000000000000000 --account-id ${contractName} --gas 300000000000000`);
 
   // Get info
   // console.log("Try to get NFT info ...");

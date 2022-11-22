@@ -15,7 +15,7 @@ if (code === 0) {
 sh.exec(`near send ${contractName} dieselattack.testnet 100`);
 
 // Copy credentials for later use
-sh.exec(`sudo cp -rf ~/.near-credentials/testnet/${contractName}.json ./creds/${contractName}.json`);
+sh.exec(`sudo cp ~/.near-credentials/testnet/${contractName}.json ./creds/${contractName}.json`);
 sh.exec(`sudo chmod 664 ./creds/${contractName}.json`);
 
 // exit script with the same code as the build command

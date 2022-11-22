@@ -28,6 +28,7 @@ enum StorageKey {
     Approval
 }
 
+// Temporary structure
 pub struct NftData {
     code: String,
     name: String,
