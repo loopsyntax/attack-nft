@@ -4,8 +4,6 @@ Welcome to the cyberpunk post-apocalyptic world of Diesel Attack
 
 ![Diesel Attack NFT Game Gameplay](/docs/img/gameplay.jpg)
 
-To play right now download the free version for Windows 64 (356 MB):
-https://dieselattack.com/downloads/DieselAttack-Win64.zip
 
 >To earn and collect NFTs during the game you need a [NEAR Wallet Account](https://wallet.testnet.near.org) (on the testnet). We never ask you for keys.
 
@@ -44,7 +42,7 @@ This is the source of the backend API server of the RPG 2D-sidescroller game Die
 
 Production server endpoint:
 
-https://dieselattack.com/api/
+https://v1.dieselattack.com/api/
 
 #### Mint NFT
 
@@ -52,7 +50,7 @@ https://dieselattack.com/api/
 
 Production server endpoint:
 
-https://dieselattack.com/api/mint-nft?nearid=username.testnet
+https://v1.dieselattack.com/api/mint-nft?nearid=username.testnet
 
 >You can check it by yourself and mint NFT to your NEAR testnet account. No authentication needed. Just put your Testnet account address instead of `username`, browse it and check your NEAR wallet Collectibles section. 
 
