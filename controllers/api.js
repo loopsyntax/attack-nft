@@ -60,7 +60,7 @@ contractAccount.addAccessKey = (publicKey) =>
 const contract = new Contract(contractAccount, contractName, contractMethods);
 
 const Api = async (request, reply) => {
-    return 'Diesel Attack NEAR NFT Backend Server!';
+    return 'Diesel Attack NFT Game Backend API Server!';
 }
 
 const ApiMintNft = async (request, reply) => {

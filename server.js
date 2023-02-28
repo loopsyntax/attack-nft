@@ -2,7 +2,7 @@
 
 const port = process.env.PORT || 4000;
 
-// One should create api.log file in project root directory if doesn't exist
+// You should create api.log file in project root directory if it doesn't exist
 
 const fastify = require('fastify')({
     logger: {
@@ -16,7 +16,7 @@ fastify.register(require('./routes/api'));
 const start = async () => {
     try {
         await fastify.listen({port});
-        console.log(`Diesel Attack NFT backend server is listening at localhost: ${port}`);
+        console.log(`Diesel Attack NFT backend server v1.1.0 is listening at localhost: ${port}`);
     } catch (err) {
         fastify.log.error(err);
         process.exit(1);
